@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+body {
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+
+
+}
+
+nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    width: 100%;
+    background-color: #ff6961;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #181818;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    text-align: center;
+
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: #ff6961;
+
+}
+
+header h1, header p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff6961;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn i {
+    margin-left: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    background-color: #181818;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+
+.download-button {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+#upload-file {
+    padding-bottom: 50px;
+
+}
+
+
+
+
+.intro-text {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+input[type=file]::file-selector-button {
+    background-color: #fff;
+    color: #000;
+    border: 0px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #ff6961;
+    color: #fff;
+}
+
+.start-event {
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.end-event {
+    border: 4px solid #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.diagram {
+    display: flex;
+    align-items: center;
+}
+
+.generic-task {
+    border: 2px solid #000;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-align: center;
+}

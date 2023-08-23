@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DialogFlow - EPC to BPMN Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.4/joint.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<style>
+
+    .diagram-text {
+        position: absolute;
+        font-size: 14px;
+        color: white;
+    }
+
+    .arrow {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+</style>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.4/joint.js"></script>
+
+    <nav>
+        <div class="logo"><i class="fas fa-cogs"></i> DiagnoFlow</div>
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
+    <div id="resultant-diagram">
+        <div id="diagram-container">
+        </div>
+    </div>
+    <main id="main">
+
+        <header>
+            <h1>Welcome to DiagnoFlow</h1>
+            <p>Your reliable EPC to BPMN converter</p>
+            <p class="intro-text">DiagnoFlow simplifies the task of translating EPC diagrams into the more detailed BPMN
+                standard, making it easier to model, analyze, and improve business processes. Try DiagnoFlow today and
+                experience the future of process modeling.</p>
+            <button class="btn try-it-now">Try it Now <i class="fas fa-arrow-right"></i></button>
+        </header>
+        <div>
+            <div id="upload-file">
+                <h2 style="display: flex; align-items: center; gap: 10px;"><i class="fas fa-upload"></i> Upload your
+                    file</h2>
+                <input type="file" id="file-input" accept=".xml">
+            </div>
+            <div id="output-file">
+                <h2 style="display: flex; gap: 10px;"><i class="fas fa-download"></i> Your converted file</h2>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn download-button">Download <i class="fas fa-file-download"></i></button>
+            <button id="view-diagram" class="btn download-button ">View Diagram</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="./main.js"></script>
+
+</html>

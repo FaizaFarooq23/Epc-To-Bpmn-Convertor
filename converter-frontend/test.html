@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.4/joint.css" />
+</head>
+
+<body>
+  <!-- content -->
+  <div id="myholder"></div>
+
+  <!-- dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.1/backbone.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/3.7.4/joint.js"></script>
+
+  <!-- code -->
+  <script type="text/javascript">
+
+    var dia = joint.dia;
+    var util = joint.util;
+    var standard = joint.shapes.standard;
+
+    // Custom attribute for retrieving image placeholder with specific size
+    dia.attributes.placeholderURL = {
+      qualify: function (url) {
+        return typeof url === 'string';
+      },
+      set: function (url, refBBox) {
+        return { 'xlink:href': util.template(url)(refBBox.round().toJSON()) };
+      }
+    };
+
+    var graph = new dia.Graph();
+    new dia.Paper({
+      el: document.getElementById('myholder'),
+      width: 1000,
+      height: 800,
+      gridSize: 1,
+      model: graph
+    });
+
+
+
+    var rectangle = new standard.Rectangle();
+    rectangle.resize(100, 100);
+    rectangle.position(50, 10);
+    rectangle.attr('root/tabindex', 1);
+    rectangle.attr('root/title', 'joint.shapes.standard.Rectangle');
+    rectangle.attr('body/fill', '#30d0c6');
+    rectangle.attr('body/fillOpacity', 0.5);
+    rectangle.attr('label/text', 'Rectangle');
+    rectangle.addTo(graph);
+
+
+
+    var image = new standard.Image();
+    image.resize(150, 100);
+    image.position(25, 410);
+    image.attr('root/tabindex', 8);
+    image.attr('root/title', 'joint.shapes.standard.Image');
+    image.attr('label/text', 'Image');
+    image.attr('image/placeholderURL', 'https://static-00.iconduck.com/assets.00/intermediate-event-throw-message-icon-2048x2045-67ayof3q.png');
+    image.addTo(graph);
+
+    var link = new standard.Link();
+    link.source(rectangle);
+    link.target(image);
+    link.addTo(graph);
+
+
+
+  </script>
+</body>
+
+</html>

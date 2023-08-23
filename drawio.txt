@@ -1,0 +1,35 @@
+Shape value : user opens website
+Shape type : Event
+Shape width : 120
+Shape height : 80
+---
+Shape value : Enter Username and Password&nbsp;
+Shape type : Function
+Shape width : 130
+Shape height : 80
+---
+Shape value : XOR
+Shape type : Gateway
+Shape width : 80
+Shape height : 80
+---
+Shape value : Login successful
+Shape type : Event
+Shape width : 120
+Shape height : 80
+---
+Shape value : Invalid Login
+Shape type : Event
+Shape width : 120
+Shape height : 80
+---
+Shape value : Display&nbsp; user Dashboard
+Shape type : Function
+Shape width : 120
+Shape height : 60
+---
+Shape value : Dashboard displayed
+Shape type : Event
+Shape width : 120
+Shape height : 80
+---
